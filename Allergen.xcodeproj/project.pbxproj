@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773D2C321B3F5FBF001C90DA /* IPAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 773D2C311B3F5FBF001C90DA /* IPAddress.c */; };
 		77A217CA1B3F3544008450AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A217C91B3F3544008450AF /* AppDelegate.swift */; };
 		77A217CD1B3F3544008450AF /* Allergen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77A217CB1B3F3544008450AF /* Allergen.xcdatamodeld */; };
 		77A217CF1B3F3544008450AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A217CE1B3F3544008450AF /* ViewController.swift */; };
@@ -14,6 +15,9 @@
 		77A217D41B3F3544008450AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A217D31B3F3544008450AF /* Images.xcassets */; };
 		77A217D71B3F3544008450AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A217D51B3F3544008450AF /* LaunchScreen.xib */; };
 		77A217E31B3F3544008450AF /* AllergenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A217E21B3F3544008450AF /* AllergenTests.swift */; };
+		77A217F31B3F3686008450AF /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A217F21B3F3686008450AF /* SimplePing.m */; };
+		77A217F51B3F36B2008450AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A217F41B3F36B2008450AF /* CFNetwork.framework */; };
+		B925F619AF6F60F240E2D2F7 /* Pods_Allergen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F462C2EB898A36EE601AD522 /* Pods_Allergen.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4705A2BE61AF98C6168CCFFF /* Pods-Allergen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Allergen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Allergen/Pods-Allergen.debug.xcconfig"; sourceTree = "<group>"; };
+		773D2C301B3F5FBF001C90DA /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		773D2C311B3F5FBF001C90DA /* IPAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPAddress.c; sourceTree = "<group>"; };
+		773D2C331B3F6B99001C90DA /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		77A217C41B3F3544008450AF /* Allergen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Allergen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A217C81B3F3544008450AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77A217C91B3F3544008450AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +46,12 @@
 		77A217DC1B3F3544008450AF /* AllergenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllergenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A217E11B3F3544008450AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77A217E21B3F3544008450AF /* AllergenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenTests.swift; sourceTree = "<group>"; };
+		77A217ED1B3F359A008450AF /* Allergen-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Allergen-Bridging-Header.h"; sourceTree = "<group>"; };
+		77A217F11B3F3686008450AF /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		77A217F21B3F3686008450AF /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		77A217F41B3F36B2008450AF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C99E2140D215C5B4A9D81953 /* Pods-Allergen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Allergen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Allergen/Pods-Allergen.release.xcconfig"; sourceTree = "<group>"; };
+		F462C2EB898A36EE601AD522 /* Pods_Allergen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Allergen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A217F51B3F36B2008450AF /* CFNetwork.framework in Frameworks */,
+				B925F619AF6F60F240E2D2F7 /* Pods_Allergen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +74,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57202DB9CB288D2BD300B3F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F462C2EB898A36EE601AD522 /* Pods_Allergen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73A06AE6C6E80CFE309850B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4705A2BE61AF98C6168CCFFF /* Pods-Allergen.debug.xcconfig */,
+				C99E2140D215C5B4A9D81953 /* Pods-Allergen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77A217BB1B3F3544008450AF = {
 			isa = PBXGroup;
 			children = (
+				77A217F41B3F36B2008450AF /* CFNetwork.framework */,
 				77A217C61B3F3544008450AF /* Allergen */,
 				77A217DF1B3F3544008450AF /* AllergenTests */,
 				77A217C51B3F3544008450AF /* Products */,
+				73A06AE6C6E80CFE309850B2 /* Pods */,
+				57202DB9CB288D2BD300B3F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +115,7 @@
 		77A217C61B3F3544008450AF /* Allergen */ = {
 			isa = PBXGroup;
 			children = (
+				77A217EC1B3F355D008450AF /* SimplePing */,
 				77A217C91B3F3544008450AF /* AppDelegate.swift */,
 				77A217CE1B3F3544008450AF /* ViewController.swift */,
 				77A217D01B3F3544008450AF /* Main.storyboard */,
@@ -115,6 +152,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		77A217EC1B3F355D008450AF /* SimplePing */ = {
+			isa = PBXGroup;
+			children = (
+				773D2C331B3F6B99001C90DA /* route.h */,
+				77A217F11B3F3686008450AF /* SimplePing.h */,
+				77A217F21B3F3686008450AF /* SimplePing.m */,
+				77A217ED1B3F359A008450AF /* Allergen-Bridging-Header.h */,
+				773D2C301B3F5FBF001C90DA /* IPAddress.h */,
+				773D2C311B3F5FBF001C90DA /* IPAddress.c */,
+			);
+			name = SimplePing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77A217E61B3F3544008450AF /* Build configuration list for PBXNativeTarget "Allergen" */;
 			buildPhases = (
+				ABFC8CB91C27CED15C306924 /* Check Pods Manifest.lock */,
 				77A217C01B3F3544008450AF /* Sources */,
 				77A217C11B3F3544008450AF /* Frameworks */,
 				77A217C21B3F3544008450AF /* Resources */,
+				15D12B2C62B7B3D2B460C396 /* Copy Pods Resources */,
+				3873FA9E8062A45A4EFCCAD5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,14 +263,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15D12B2C62B7B3D2B460C396 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Allergen/Pods-Allergen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3873FA9E8062A45A4EFCCAD5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Allergen/Pods-Allergen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABFC8CB91C27CED15C306924 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77A217C01B3F3544008450AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				77A217CF1B3F3544008450AF /* ViewController.swift in Sources */,
+				773D2C321B3F5FBF001C90DA /* IPAddress.c in Sources */,
 				77A217CA1B3F3544008450AF /* AppDelegate.swift in Sources */,
 				77A217CD1B3F3544008450AF /* Allergen.xcdatamodeld in Sources */,
+				77A217F31B3F3686008450AF /* SimplePing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,21 +445,28 @@
 		};
 		77A217E71B3F3544008450AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4705A2BE61AF98C6168CCFFF /* Pods-Allergen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Allergen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Allergen/Allergen-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		77A217E81B3F3544008450AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99E2140D215C5B4A9D81953 /* Pods-Allergen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Allergen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Allergen/Allergen-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -413,6 +523,7 @@
 				77A217E81B3F3544008450AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77A217E91B3F3544008450AF /* Build configuration list for PBXNativeTarget "AllergenTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +532,7 @@
 				77A217EB1B3F3544008450AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
