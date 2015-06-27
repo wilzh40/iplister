@@ -35,6 +35,9 @@
 		773D2C301B3F5FBF001C90DA /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
 		773D2C311B3F5FBF001C90DA /* IPAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPAddress.c; sourceTree = "<group>"; };
 		773D2C331B3F6B99001C90DA /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		773D2C341B3F6BE5001C90DA /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		773D2C351B3F6BEC001C90DA /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		773D2C361B3F6C21001C90DA /* if_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_types.h; sourceTree = "<group>"; };
 		77A217C41B3F3544008450AF /* Allergen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Allergen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A217C81B3F3544008450AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77A217C91B3F3544008450AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +158,10 @@
 		77A217EC1B3F355D008450AF /* SimplePing */ = {
 			isa = PBXGroup;
 			children = (
+				773D2C361B3F6C21001C90DA /* if_types.h */,
+				773D2C351B3F6BEC001C90DA /* if_ether.h */,
 				773D2C331B3F6B99001C90DA /* route.h */,
+				773D2C341B3F6BE5001C90DA /* if_arp.h */,
 				77A217F11B3F3686008450AF /* SimplePing.h */,
 				77A217F21B3F3686008450AF /* SimplePing.m */,
 				77A217ED1B3F359A008450AF /* Allergen-Bridging-Header.h */,

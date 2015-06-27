@@ -24,6 +24,8 @@
 #include <errno.h>
 #include <net/if_dl.h>
 
+#include <sys/types.h>
+#include <sys/socket.h>
 #include <net/ethernet.h>
 
 #include "IPAddress.h"
