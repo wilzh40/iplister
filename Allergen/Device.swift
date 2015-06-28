@@ -10,5 +10,6 @@ import Foundation
 
 class Device: NSObject {
     var address: NSString?
+    var host: NSString?
     var mac: NSString?
 }

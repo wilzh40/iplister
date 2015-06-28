@@ -16,6 +16,7 @@ class ViewController: UIViewController, GBPingDelegate, ScanLANDelegate {
 
     var ping: GBPing!
     var scanner: ScanLAN!
+    var devices = [Device]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +87,25 @@ class ViewController: UIViewController, GBPingDelegate, ScanLANDelegate {
     
     func scanLANDidFindNewAdrress(address: String!, havingHostName hostName: String!) {
         println("Found \(address) at \(hostName)")
+        let d = Device()
+        d.address = address
+        d.host = hostName
+        devices.append(d)
+        
+    }
+    func scanLANDidFinishScanning() {
+        for d in devices {
+           
+            // Turn arr into an array of chars
+            //var address = [Int8](count:)
+            let mac = SimplePing().ip2mac(inet_addr(d.address!.UTF8String))
 
+            
+            
+            
+            
+             println(d.address! as String + " " + mac)
+        }
     }
 
 }
