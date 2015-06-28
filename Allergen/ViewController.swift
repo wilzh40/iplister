@@ -12,14 +12,21 @@ import GBPing
 
 
 
-class ViewController: UIViewController, UITableViewDataSource, GBPingDelegate, ScanLANDelegate {
 
+class ViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, GBPingDelegate, ScanLANDelegate {
+
+    @IBOutlet var ipInfo: UITableView!
     var ping: GBPing!
+    
     var scanner: ScanLAN!
     var devices = [Device]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ipInfo.dataSource = self
+        
+        ipInfo.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         ping = GBPing()
         ping.host = "127.0.0.1"
@@ -93,7 +100,15 @@ class ViewController: UIViewController, UITableViewDataSource, GBPingDelegate, S
             d.mac = mac
             println("Found \(address) at \(mac)")
             //println(d.address! as String + " " + mac)
+            
+
+            
+
+            
         }
+        dispatch_async(dispatch_get_main_queue(),{
+            self.tableView.reloadData()
+        });
         
        
         
@@ -109,21 +124,32 @@ class ViewController: UIViewController, UITableViewDataSource, GBPingDelegate, S
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return devices.count;
     }
-    
+    override 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->   UITableViewCell {
         let cell = UITableViewCell()
         let label = UILabel(frame: CGRect(x:0, y:0, width:200, height:50))
-        label.text = "Hi!"
-        cell.addSubview(label)
+        
+        if (self.devices.count != 0) {
+            let d = devices[indexPath.row]
+            let cell = UITableViewCell()
+            let label = UILabel(frame: CGRect(x:40, y:10, width:200, height:50))
+            label.text = d.address as! String
+            cell.addSubview(label)
+            return cell
+            
+            
+        }
+    
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 50
     }
+
 
 
 }
