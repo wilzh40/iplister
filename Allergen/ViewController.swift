@@ -12,9 +12,10 @@ import GBPing
 
 
 
-class ViewController: UIViewController, GBPingDelegate {
+class ViewController: UIViewController, GBPingDelegate, ScanLANDelegate {
 
     var ping: GBPing!
+    var scanner: ScanLAN!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,13 @@ class ViewController: UIViewController, GBPingDelegate {
             
         })
         println("Simple IP" + SimplePing().macaddress())
+        println(SimplePing().ip2mac(23))
+        
+        
+        // Scanner
+        scanner = ScanLAN(delegate: self)
+        scanner.startScan()
+        
         
         
         
@@ -75,6 +83,11 @@ class ViewController: UIViewController, GBPingDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func scanLANDidFindNewAdrress(address: String!, havingHostName hostName: String!) {
+        println("Found \(address) at \(hostName)")
+
+    }
 
 }
 

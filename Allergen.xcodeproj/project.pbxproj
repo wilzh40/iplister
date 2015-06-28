@@ -17,6 +17,9 @@
 		77A217E31B3F3544008450AF /* AllergenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A217E21B3F3544008450AF /* AllergenTests.swift */; };
 		77A217F31B3F3686008450AF /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A217F21B3F3686008450AF /* SimplePing.m */; };
 		77A217F51B3F36B2008450AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A217F41B3F36B2008450AF /* CFNetwork.framework */; };
+		77D0695A1B3F73F9006CCABB /* ScanLAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D069591B3F73F9006CCABB /* ScanLAN.m */; };
+		77D0695D1B3F7416006CCABB /* SimplePingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D0695C1B3F7416006CCABB /* SimplePingHelper.m */; };
+		77D069601B3F74F9006CCABB /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0695F1B3F74F9006CCABB /* Device.swift */; };
 		B925F619AF6F60F240E2D2F7 /* Pods_Allergen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F462C2EB898A36EE601AD522 /* Pods_Allergen.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,11 @@
 		77A217F11B3F3686008450AF /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		77A217F21B3F3686008450AF /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		77A217F41B3F36B2008450AF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		77D069581B3F73F9006CCABB /* ScanLAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanLAN.h; sourceTree = "<group>"; };
+		77D069591B3F73F9006CCABB /* ScanLAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanLAN.m; sourceTree = "<group>"; };
+		77D0695B1B3F7416006CCABB /* SimplePingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePingHelper.h; sourceTree = "<group>"; };
+		77D0695C1B3F7416006CCABB /* SimplePingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePingHelper.m; sourceTree = "<group>"; };
+		77D0695F1B3F74F9006CCABB /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		C99E2140D215C5B4A9D81953 /* Pods-Allergen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Allergen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Allergen/Pods-Allergen.release.xcconfig"; sourceTree = "<group>"; };
 		F462C2EB898A36EE601AD522 /* Pods_Allergen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Allergen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +126,7 @@
 		77A217C61B3F3544008450AF /* Allergen */ = {
 			isa = PBXGroup;
 			children = (
+				77D0695E1B3F74EE006CCABB /* Model */,
 				77A217EC1B3F355D008450AF /* SimplePing */,
 				77A217C91B3F3544008450AF /* AppDelegate.swift */,
 				77A217CE1B3F3544008450AF /* ViewController.swift */,
@@ -158,17 +167,29 @@
 		77A217EC1B3F355D008450AF /* SimplePing */ = {
 			isa = PBXGroup;
 			children = (
+				77A217ED1B3F359A008450AF /* Allergen-Bridging-Header.h */,
 				773D2C361B3F6C21001C90DA /* if_types.h */,
 				773D2C351B3F6BEC001C90DA /* if_ether.h */,
 				773D2C331B3F6B99001C90DA /* route.h */,
 				773D2C341B3F6BE5001C90DA /* if_arp.h */,
 				77A217F11B3F3686008450AF /* SimplePing.h */,
 				77A217F21B3F3686008450AF /* SimplePing.m */,
-				77A217ED1B3F359A008450AF /* Allergen-Bridging-Header.h */,
 				773D2C301B3F5FBF001C90DA /* IPAddress.h */,
 				773D2C311B3F5FBF001C90DA /* IPAddress.c */,
+				77D069581B3F73F9006CCABB /* ScanLAN.h */,
+				77D069591B3F73F9006CCABB /* ScanLAN.m */,
+				77D0695B1B3F7416006CCABB /* SimplePingHelper.h */,
+				77D0695C1B3F7416006CCABB /* SimplePingHelper.m */,
 			);
 			name = SimplePing;
+			sourceTree = "<group>";
+		};
+		77D0695E1B3F74EE006CCABB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77D0695F1B3F74F9006CCABB /* Device.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,9 +343,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D0695D1B3F7416006CCABB /* SimplePingHelper.m in Sources */,
+				77D0695A1B3F73F9006CCABB /* ScanLAN.m in Sources */,
 				77A217CF1B3F3544008450AF /* ViewController.swift in Sources */,
 				773D2C321B3F5FBF001C90DA /* IPAddress.c in Sources */,
 				77A217CA1B3F3544008450AF /* AppDelegate.swift in Sources */,
+				77D069601B3F74F9006CCABB /* Device.swift in Sources */,
 				77A217CD1B3F3544008450AF /* Allergen.xcdatamodeld in Sources */,
 				77A217F31B3F3686008450AF /* SimplePing.m in Sources */,
 			);

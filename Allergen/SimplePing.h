@@ -100,7 +100,8 @@
     // follows the IP header.  This doesn't do any significant validation of the packet.
 
 - (NSString *)macaddress;
--(NSString*) ip2mac: (char*) ip;
+- (NSString*)ip2mac:(in_addr_t)addr;
+
 
 @end
 

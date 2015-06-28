@@ -4,3 +4,5 @@
 
 #import "SimplePing.h"
 #import "IPAddress.h"
+#import "SimplePingHelper.h"
+#import "ScanLAN.h"
