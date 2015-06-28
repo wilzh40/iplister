@@ -31,7 +31,6 @@ class ViewController: UIViewController, GBPingDelegate, ScanLANDelegate {
             if success {
                 self.ping.startPinging()
                 let ns = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("stopPing"), userInfo: nil, repeats: false)
-                
             }
             
         })
@@ -86,25 +85,27 @@ class ViewController: UIViewController, GBPingDelegate, ScanLANDelegate {
 
     
     func scanLANDidFindNewAdrress(address: String!, havingHostName hostName: String!) {
-        println("Found \(address) at \(hostName)")
         let d = Device()
         d.address = address
         d.host = hostName
         devices.append(d)
+        if let mac = SimplePing().ip2mac(inet_addr(d.address!.UTF8String)) {
+            d.mac = mac
+            println("Found \(address) at \(mac)")
+            //println(d.address! as String + " " + mac)
+        }
+        
+       
+        
         
     }
     func scanLANDidFinishScanning() {
         for d in devices {
-           
+            println("Found \(d.address) at \(d.mac)")
+
             // Turn arr into an array of chars
             //var address = [Int8](count:)
-            let mac = SimplePing().ip2mac(inet_addr(d.address!.UTF8String))
-
-            
-            
-            
-            
-             println(d.address! as String + " " + mac)
+           
         }
     }
 

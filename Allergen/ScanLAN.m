@@ -108,6 +108,7 @@
     
     for (struct addrinfo *r = results; r; r = r->ai_next)
     {
+        /*
         char hostname[NI_MAXHOST] = {0};
         error = getnameinfo(r->ai_addr, r->ai_addrlen, hostname, sizeof hostname, NULL, 0 , 0);
         if (error != 0)
@@ -121,6 +122,7 @@
             break;
         }
         freeaddrinfo(results);
+         */
     }
     return hostName;
 }
