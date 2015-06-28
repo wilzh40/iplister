@@ -12,7 +12,7 @@ import GBPing
 
 
 
-class ViewController: UIViewController, GBPingDelegate, ScanLANDelegate {
+class ViewController: UIViewController, UITableViewDataSource, GBPingDelegate, ScanLANDelegate {
 
     var ping: GBPing!
     var scanner: ScanLAN!
@@ -108,6 +108,23 @@ class ViewController: UIViewController, GBPingDelegate, ScanLANDelegate {
            
         }
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return devices.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->   UITableViewCell {
+        let cell = UITableViewCell()
+        let label = UILabel(frame: CGRect(x:0, y:0, width:200, height:50))
+        label.text = "Hi!"
+        cell.addSubview(label)
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50
+    }
+
 
 }
 
