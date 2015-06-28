@@ -69,7 +69,13 @@
 #include <net/if.h>
 #include <net/if_dl.h>
 #include "if_types.h"
+
+#if TARGET_IPHONE_SIMULATOR
+#include <net/route.h>
+#else
 #include "route.h"
+#endif
+
 #include "if_ether.h"
 #include <netinet/in.h>
 
